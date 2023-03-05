@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <v-layout row wrap>
-            <v-navigation-drawer permanent expand-on-hover>
+            <v-navigation-drawer permanent expand-on-hover class="px-1">
                 <v-list>
                     <v-list-item class="px-2">
                         <v-list-item-avatar>
