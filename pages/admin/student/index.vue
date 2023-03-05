@@ -9,7 +9,7 @@
                     </v-col>
                     <v-col class="pt-6">
                         <v-btn color="success" rounded class="me-2">Search</v-btn>
-                        <v-btn color="primary" rounded><v-icon dark>mdi-plus</v-icon>New Student</v-btn>
+                        <v-btn color="primary" rounded to="./student/add_student"><v-icon dark>mdi-plus</v-icon>New Student</v-btn>
                     </v-col>
                 </v-row>
             </template>
