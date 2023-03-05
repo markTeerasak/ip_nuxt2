@@ -1,5 +1,19 @@
 <template>
     <v-app id="inspire">
+    <v-overlay v-model="overlay" contained class="align-center justify-center">
+            <v-row class="my-3">
+                <v-btn color="success" @click="overlay = false">
+                    <v-icon class="me-1">mdi-logout-variant</v-icon>
+                    logout
+                </v-btn>
+            </v-row>
+            <v-row class="my-3">
+                <v-btn color="error" @click="overlay = false">
+                    <v-icon class="me-1">mdi-logout-variant</v-icon>
+                    logout
+                </v-btn>
+            </v-row>
+        </v-overlay>
         <v-app-bar flat>
             <v-avatar :color="$vuetify.breakpoint.smAndDown ? 'grey darken-1' : 'transparent'" size="32"></v-avatar>
             
