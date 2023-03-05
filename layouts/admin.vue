@@ -20,30 +20,12 @@
                 <v-divider>
                 </v-divider>
 
-                <v-list nav dense>
-                    <v-list-item link>
+                <v-list nav dense v-for="(item, i) in items" :key="i" >
+                    <v-list-item link :to="item.to" router exact>
                         <v-list-item-icon>
-                            <v-icon>mdi-account-multiple</v-icon>
+                            <v-icon>{{ item.icon }}</v-icon>
                         </v-list-item-icon>
-                        <v-list-item-title>Student</v-list-item-title>
-                    </v-list-item>
-                    <v-list-item link>
-                        <v-list-item-icon>
-                            <v-icon>mdi-account-multiple</v-icon>
-                        </v-list-item-icon>
-                        <v-list-item-title>Teacher</v-list-item-title>
-                    </v-list-item>
-                    <v-list-item link>
-                        <v-list-item-icon>
-                            <v-icon>mdi-folder</v-icon>
-                        </v-list-item-icon>
-                        <v-list-item-title>Shared with me</v-list-item-title>
-                    </v-list-item>
-                    <v-list-item link>
-                        <v-list-item-icon>
-                            <v-icon>mdi-star</v-icon>
-                        </v-list-item-icon>
-                        <v-list-item-title>Starred</v-list-item-title>
+                        <v-list-item-title>{{ item.title }}</v-list-item-title>
                     </v-list-item>
                 </v-list>
             </v-navigation-drawer>
@@ -63,17 +45,17 @@ export default {
                 {
                     icon: 'mdi-account-multiple',
                     title: 'Student',
-                    to: '/student',
+                    to: '/admin/student',
                 },
                 {
                     icon: 'mdi-account-multiple',
                     title: 'Teacher',
-                    to: '/teacher',
+                    to: '/admin/teacher',
                 },
                 {
                     icon: 'mdi-folder',
                     title: 'Schedule',
-                    to: '/schedule',
+                    to: '/admin/schedule',
                 },
             ],
         }
