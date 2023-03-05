@@ -2,7 +2,7 @@
     <div>
         <h2>Homework</h2>
         <h4 v-for="item in work" :key="item.work_name" > <p><b class="red--text">WorkName:</b> {{ item.work_name}}</p> <p><b class="red--text">WorkDetails:</b>{{ item.work_details }}</p>  
-            <p><b class="red--text">SubjectName:</b>{{ item.sub_name }}</p>  <p><b class="red--text">Deadline:</b>{{ item.dead_line  }}</p> </h4>
+            <p><b class="red--text">SubjectName:</b>{{ item.sub_name }}</p>  <p><b class="red--text">Deadline:</b>{{ item.dead_line  }}</p> <v-divider ></v-divider> </h4>
     </div>
 </template>
 <script>
