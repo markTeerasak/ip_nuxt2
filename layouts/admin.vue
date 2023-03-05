@@ -8,7 +8,7 @@
                             <v-img src="https://randomuser.me/api/portraits/women/85.jpg"></v-img>
                         </v-list-item-avatar>
                     </v-list-item>
-    
+
                     <v-list-item link>
                         <v-list-item-content>
                             <v-list-item-title class="text-h6">
@@ -49,7 +49,7 @@
             </v-navigation-drawer>
             <v-main style="height: 500px;">
                 <v-card-text class="pa-12">
-                    <nuxt/>
+                    <nuxt />
                 </v-card-text>
             </v-main>
         </v-layout>
@@ -57,6 +57,27 @@
 </template>
 <script>
 export default {
-    //
+    data() {
+        return {
+            items: [
+                {
+                    icon: 'mdi-account-multiple',
+                    title: 'Student',
+                    to: '/student',
+                },
+                {
+                    icon: 'mdi-account-multiple',
+                    title: 'Teacher',
+                    to: '/teacher',
+                },
+                {
+                    icon: 'mdi-folder',
+                    title: 'Schedule',
+                    to: '/schedule',
+                },
+            ],
+        }
+    }
+
 }
 </script>
