@@ -31,7 +31,7 @@ export default {
                     console.log(resp)
                     localStorage.setItem('username', this.username)
                     localStorage.setItem('password', MD5(this.password))
-                    window.location = '/user'
+                    window.location = '/'
                 })
                 .catch(()=>{
                     this.errorMsg = 'Incorrect username or password.'
@@ -42,7 +42,7 @@ export default {
                     console.log(resp)
                     localStorage.setItem('username', this.username)
                     localStorage.setItem('password', MD5(this.password))
-                    window.location = '/user'
+                    window.location = '/'
                 })
                 .catch(()=>{
                     this.errorMsg = 'Incorrect username or password.'
