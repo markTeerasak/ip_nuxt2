@@ -24,17 +24,30 @@ export default {
         }
     },
     methods: {
-        handleLoginClicked() {   
-            this.url = 'http://localhost/service/student/logins.php?username=' + this.username + '&password=' + MD5(this.password)
-            axios.get(this.url).then((resp)=>{
-                console.log(resp)
-                localStorage.setItem('username', this.username)
-                localStorage.setItem('password', MD5(this.password))
-                window.location = '/user'
-            })
-            .catch(()=>{
-                this.errorMsg = 'Incorrect username or password.'
-            })
+        handleLoginClicked() {
+            if(this.username[0] === 'T'){
+                this.url = 'http://localhost/service/teacher/login.php?username=' + this.username + '&password=' + MD5(this.password)
+                axios.get(this.url).then((resp)=>{
+                    console.log(resp)
+                    localStorage.setItem('username', this.username)
+                    localStorage.setItem('password', MD5(this.password))
+                    window.location = '/user'
+                })
+                .catch(()=>{
+                    this.errorMsg = 'Incorrect username or password.'
+                })
+            }else{
+                this.url = 'http://localhost/service/student/logins.php?username=' + this.username + '&password=' + MD5(this.password)
+                axios.get(this.url).then((resp)=>{
+                    console.log(resp)
+                    localStorage.setItem('username', this.username)
+                    localStorage.setItem('password', MD5(this.password))
+                    window.location = '/user'
+                })
+                .catch(()=>{
+                    this.errorMsg = 'Incorrect username or password.'
+                })
+            }
         }
     },
 }
