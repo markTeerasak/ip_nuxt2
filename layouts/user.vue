@@ -1,5 +1,6 @@
 <template>
-
+<v-app>
+    <v-app-bar>
         </v-app-bar>
         <v-main>
             <v-container>
@@ -30,7 +31,7 @@
 <script>
 export default {
     data: () => ({
-        links: [
-
+        links: []
+    })
 }
 </script>
