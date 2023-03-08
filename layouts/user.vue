@@ -90,9 +90,9 @@ export default {
             email: 'john.doe@doe.com',
         },
     }),
-    components: {
-        Info
-    },
+    // components: {
+    //     Info
+    // },
     methods: {
         hendleLogout() {
             sessionStorage.clear()
