@@ -1,6 +1,9 @@
 <template lang="html">
     <div>
 
+
+
+
         <v-data-table :headers="headers" :items="desserts" item-key="student_id" class="elevation-1" :search="search"
             :custom-filter="filterOnlyCapsText">
 
@@ -72,6 +75,9 @@ export default {
     }
 
    
+
+
+
 
 }
 </script>
