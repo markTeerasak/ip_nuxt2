@@ -1,5 +1,7 @@
 <template>
     <v-app id="inspire">
+
+
         <v-app-bar flat>
             <v-avatar :color="$vuetify.breakpoint.smAndDown ? 'grey darken-1' : 'transparent'" size="32"></v-avatar>
     <v-overlay v-model="overlay" contained class="align-center justify-center">
@@ -16,6 +18,7 @@
                 </v-btn>
             </v-row>
         </v-overlay>
+
         <v-app-bar flat>
             <v-avatar :color="$vuetify.breakpoint.smAndDown ? 'grey darken-1' : 'transparent'" size="32"></v-avatar>
             <v-tabs centered class="ml-n9" color="grey darken-1">
@@ -105,6 +108,8 @@ export default {
                 title: 'schedule',
                 to: '/schedule',
             }
+
+
         {
           title: 'home',
           to: '/',
@@ -117,6 +122,7 @@ export default {
           title: 'schedule',
           to: '/schedule',
         },
+
 
         ],
         user: {
@@ -142,8 +148,11 @@ export default {
     },
     mounted() {
         this.checkLogin();
+
+
         Info,
         work
+
     }
 }
 </script>
