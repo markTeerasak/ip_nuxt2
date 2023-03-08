@@ -68,6 +68,7 @@
 </template>
   
 <script>
+import Info from '../components/info.vue'
 export default {
     data: () => ({
         links: [
@@ -90,9 +91,9 @@ export default {
             email: 'john.doe@doe.com',
         },
     }),
-    // components: {
-    //     Info
-    // },
+    components: {
+         Info 
+    },
     methods: {
         hendleLogout() {
             sessionStorage.clear()
