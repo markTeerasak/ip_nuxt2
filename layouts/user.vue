@@ -27,7 +27,7 @@
                                 {{ user.email }}
                             </p>
                             <v-divider class="my-3"></v-divider>
-                            <v-btn depressed rounded text @click="handleLogout()">
+                            <v-btn @click="hendleLogout()">
                                 <v-icon>mdi-logout</v-icon>
                                 Logout
                             </v-btn>
@@ -97,9 +97,18 @@ export default {
     },
     methods: {
         hendleLogout() {
-            localStorage.clear(),
+            sessionStorage.clear()
             window.location = './login'
+            
+        },
+        checkLogin() {
+            if(!sessionStorage.getItem('user_id')){
+                window.location = './login'
+            } 
         }
+    },
+    mounted() {
+        this.checkLogin();
     }
 }
 </script>
