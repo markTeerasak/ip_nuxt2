@@ -9,7 +9,7 @@
                     </v-col>
                     <v-col class="pt-6">
                         <v-btn color="success" rounded class="me-2">Search</v-btn>
-                        <v-btn color="primary" rounded><v-icon dark>mdi-plus</v-icon>New Student</v-btn>
+                        <v-btn color="primary" rounded to="./student/add_student"><v-icon dark>mdi-plus</v-icon>New Student</v-btn>
                     </v-col>
                 </v-row>
             </template>
@@ -66,3 +66,25 @@ export default {
                     value: 'calories',
                     filter: value => {
                         if (!this.calories) return true
+
+                        return value < parseInt(this.calories)
+                    },
+                },
+                { text: 'Fat (g)', value: 'fat' },
+                { text: 'Carbs (g)', value: 'carbs' },
+                { text: 'Protein (g)', value: 'protein' },
+                { text: 'Iron (%)', value: 'iron' },
+            ]
+        },
+    },
+    methods: {
+        filterOnlyCapsText(value, search, item) {
+            return value != null &&
+                search != null &&
+                typeof value === 'string' &&
+                value.toString().toLocaleUpperCase().indexOf(search) !== -1
+        },
+    },
+}
+</script>
+<style lang="css"></style>
