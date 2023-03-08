@@ -12,14 +12,22 @@
 export default {
     data() {
         return {
-            student_id: 'S152345',
+            student_id: '',
             name: 'fname' + '  ' + 'lname',
             tel: '0987654321',
             gender: 'm',
             birthday: '12/03/1999',
             nationality: 'thai'
         }
-    }
+    },
+    mounted() {
+        this.storage();
+    },
+    methods: {
+        storage(){
+            this.student_id = sessionStorage.getItem('user_id')
+        }        
+    },
 }
 </script>
 <style lang="css">

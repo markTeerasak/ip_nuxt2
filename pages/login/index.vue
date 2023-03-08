@@ -29,8 +29,8 @@ export default {
                 this.url = 'http://localhost/service/teacher/login.php?username=' + this.username + '&password=' + MD5(this.password)
                 axios.get(this.url).then((resp)=>{
                     console.log(resp)
-                    localStorage.setItem('username', this.username)
-                    localStorage.setItem('password', MD5(this.password))
+                    sessionStorage.setItem('user_id', this.username)
+                    sessionStorage.setItem('password', MD5(this.password))
                     window.location = '/'
                 })
                 .catch(()=>{
@@ -40,8 +40,8 @@ export default {
                 this.url = 'http://localhost/service/student/logins.php?username=' + this.username + '&password=' + MD5(this.password)
                 axios.get(this.url).then((resp)=>{
                     console.log(resp)
-                    localStorage.setItem('username', this.username)
-                    localStorage.setItem('password', MD5(this.password))
+                    sessionStorage.setItem('user_id', this.username)
+                    sessionStorage.setItem('password', MD5(this.password))
                     window.location = '/'
                 })
                 .catch(()=>{
